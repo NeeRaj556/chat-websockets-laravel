@@ -1,70 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+# WebSocket Chat Project
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSocket Chat Project</title>
-</head>
+Welcome to the WebSocket Chat Project! This project provides a real-time chat experience using WebSockets. Follow the steps below to set up and run the project.
 
-<body>
+## Getting Started
 
-    <h1>WebSocket Chat Project</h1>
+### Prerequisites
 
-    <p>Welcome to the WebSocket Chat Project! This project provides a real-time chat experience using WebSockets. Follow the steps below to set up and run the project.</p>
+- PHP (>= 7.4)
+- Composer
+- Node.js
+- MySQL or other compatible databases
 
-    <h2>Getting Started</h2>
+### Installation
 
-    <h3>Prerequisites</h3>
+1. Clone the repository to your local machine:
+   [git clone https://github.com/your-username/websocket-chat.git](https://github.com/NeeRaj556/chat-websockets-laravel/)https://github.com/NeeRaj556/chat-websockets-laravel/
+  2. Change into the project directory:
 
-    <ul>
-        <li>PHP (>= 7.4)</li>
-        <li>Composer</li>
-        <li>Node.js</li>
-        <li>MySQL or other compatible databases</li>
-    </ul>
 
-    <h3>Installation</h3>
+    cd websocket-chat
 
-    <ol>
-        <li>Clone the repository to your local machine:</li>
 
-        <pre><code>git clone https://github.com/your-username/websocket-chat.git</code></pre>
+  3.Copy/Rename the .env_copy file to .env:
+      
+       cp .env_copy .env
+       
+  4.Database Setup
+    1 Open the .env file and set up your database connection details:
+              
+                DB_CONNECTION=mysql
+            DB_HOST=your_database_host
+            DB_PORT=your_database_port
+            DB_DATABASE=your_database_name
+            DB_USERNAME=your_database_username
+            DB_PASSWORD=your_database_password
+    
+ 2 Create database according to .env file
+ 
+   5.Pusher Setup 
+        * SignIn/SignUp and then From Dashboard Get the API Key
+                 
+                    PUSHER_APP_ID=
+                    PUSHER_APP_KEY=
+                    PUSHER_APP_SECRET=
+                    PUSHER_HOST=
+                    PUSHER_PORT=443
+                    PUSHER_SCHEME=https
+                    PUSHER_APP_CLUSTER=mt1
 
-        <li>Change into the project directory:</li>
+   6.Run database migrations and seed data:
+   
+    php artisan migrate:fresh --seed
+    
+   7.Initialize the WebSocket server:(NOTE: Run continous in background)
+   
+    php artisan websocket:init
 
-        <pre><code>cd websocket-chat</code></pre>
+   8.Start the Laravel development server:
 
-        <li>Copy the <code>.env_copy</code> file to <code>.env</code>:</li>
+     php artisan serve
 
-        <pre><code>cp .env_copy .env</code></pre>
-    </ol>
-
-    <h2>Database Setup</h2>
-
-    <ol>
-        <li>Open the <code>.env</code> file and set up your database connection details:</li>
-
-        <pre><code>
-DB_CONNECTION=mysql
-DB_HOST=your_database_host
-DB_PORT=your_database_port
-DB_DATABASE=your_database_name
-DB_USERNAME=your_database_username
-DB_PASSWORD=your_database_password
-</code></pre>
-
-        <li>Run database migrations and seed data:</li>
-
-        <pre><code>php artisan migrate:fresh --seed</code></pre>
-    </ol>
-
-    <h2>WebSocket Setup</h2>
-
-    <ol>
-        <li>Initialize the WebSocket server:</li>
-
-        <pre><code>php artisan websocket:init</code></pre>
-    </ol>
-
-    <h2>Run the Application</h2>
