@@ -6,7 +6,7 @@ Welcome to the WebSocket Chat Project! This project provides a real-time chat ex
 
 ### Prerequisites
 
-- PHP (>= 7.4)
+- PHP (>= 8.0)
 - Composer
 - Node.js
 - MySQL or other compatible databases
