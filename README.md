@@ -21,14 +21,14 @@ Welcome to the WebSocket Chat Project! This project provides a real-time chat ex
     cd websocket-chat
 
 
-  3.Copy/Rename the .env_copy file to .env:
+  3.Copy/Rename the .env.example file to .env:
       
        cp .env_copy .env
        
   4.Database Setup
     1 Open the .env file and set up your database connection details:
               
-                DB_CONNECTION=mysql
+            DB_CONNECTION=mysql
             DB_HOST=your_database_host
             DB_PORT=your_database_port
             DB_DATABASE=your_database_name
